@@ -2,9 +2,9 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
-Date  :
+Name  :  Syed Rayan Ali
+Lane  :  IT      (delete two)
+Date  :  2026-10-02
 
 Run it:   python template.py
 
@@ -13,30 +13,18 @@ Delete these instructions as you replace them with your code.
 """
 
 # ==================================================================== INPUT
-# 1. Ask the user for your three values.
-#
-#    - the first is TEXT      (a name, a hostname, an IP)  -> no conversion needed
-#    - the second is a NUMBER (use float(), not int())
-#    - the third  is a NUMBER (use float(), not int())
-#
-#    Remember: input() always gives back text.
 
-label = ""      # : replace with an input() call
-first = 0.0     # : replace with an input() call, converted
-second = 0.0    # : replace with an input() call, converted
+label = input("Enter a label: ")      
+first = float(input("Enter the first number: "))    
+second = float(input("Enter the second number: ")) 
 
 
 # ================================================================== PROCESS
-# 2. Work out what you were NOT given.       [Typical and above]
-#
-#    - difference : how far the first is from the second
-#    - percent    : the first as a percentage of the second
-#
-#    Do not type the answers. Calculate them.
 
-difference = 0.0   # 
-percent = 0.0      # 
-
+difference = 0.0    
+percent = 0.0      
+difference = first - second
+percent = (first / second) * 100
 
 # =================================================================== OUTPUT
 # 3. Print the report.
@@ -54,7 +42,10 @@ print(f"  RECORD CHECK  -  {label}")
 print("=" * 34)
 
 # : your report lines go here
-
+print(f"First Number : {first:>10.2f}")
+print(f"Second Number: {second:>10.2f}")
+print(f"Difference : {difference:>+10.2f}")
+print(f"Percent : {percent:>10.2f}")
 print("=" * 34)
 
 
