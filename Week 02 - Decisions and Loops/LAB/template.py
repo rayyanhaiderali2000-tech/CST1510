@@ -2,9 +2,9 @@
 RECORD CHECK  -  my version
 ===========================
 
-Name  :
-Lane  :  AI / Cyber / IT      (delete two)
-Date  :
+Name  :   Syed Rayan Ali
+Lane  :   IT      (delete two)
+Date  :   2026-10-03
 
 Run it:   python template.py
 
@@ -13,47 +13,36 @@ Delete these instructions as you replace them with your code.
 """
 
 # ==================================================================== INPUT
-# 1. Ask for your three values.
-#
-#    - the first is TEXT      (a name, a hostname, an IP)  -> no conversion needed
-#    - the second is a NUMBER (use float(), not int())
-#    - the third  is a NUMBER (use float(), not int())
 
-label = ""      # replace with an input() call
-value = 0.0     # replace with an input() call, converted with float()
-limit = 0.0     # replace with an input() call, converted with float()
+label = input("Enter label: ")     
+value = float(input("Enter value: "))    
+limit = float(input("Enter limit: "))   
 
 
 # ================================================================== PROCESS
-# 2. Work out the difference and the percentage.       [Typical and above]
 
-difference = 0.0   # replace with your calculation
-percent = 0.0       # replace with your calculation
-# 3. Decide a status and store it in a variable called status.
-#
-#    Threshold : if / else        -> "OVER LIMIT" or "OK"
-#    Typical   : if / elif / else -> "OVER LIMIT" (100% or more),
-#                                     "WARNING" (90% or more), otherwise "OK"
+difference = value - limit  
+percent = (value / limit) * 100    
 
-status = ""   # replace with your if / else (or if / elif / else)
+if percent >=100:
+    status = "OVER LIMIT"
+elif percent >=90:
+    status = "NEAR LIMIT"
+else:
+    status = "OK"
 
-
-# =================================================================== OUTPUT
-# 4. Print the report.
-#
-#    Threshold : the three values you were given, plus status, inside a border
-#    Typical   : add difference and percent, 2 decimal places, right-aligned
-#    Excellent : wrap sections 1-4 in a loop so you can check as many records
-#                as you like in one run - type "quit" as the label to stop.
-#                Keep count of how many came back OVER LIMIT and print that
-#                once, after the loop ends.
+# =================================================================== OUTPUT23
 
 print()
 print("=" * 34)
 print(f"  RECORD CHECK  -  {label}")
 print("=" * 34)
 
-# your report lines go here
+print(f"Value : {value:>10.20f}")
+print(f"Limit : {limit:>10.20f}")
+print(f"Difference : {difference:>+10.2f}")
+print(f"Percent : {percent:>10.2f}")
+print(f"Status : {status:>10}")
 
 print("=" * 34)
 
