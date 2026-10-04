@@ -1,4 +1,10 @@
 *
 !.gitignore
-!LAB/
-!LAB/**
+
+!Week 01 - Values, Types and Input-Output/
+!Week 01 - Values, Types and Input-Output/LAB/
+!Week 01 - Values, Types and Input-Output/LAB/**
+
+!Week 02 - Decisions and Loops/
+!Week 02 - Decisions and Loops/LAB/
+!Week 02 - Decisions and Loops/LAB/**
