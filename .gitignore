@@ -1,12 +1,11 @@
+# Learning material: only each week's LAB folder is uploaded
+Week */*
+!Week */LAB/
+
+# Files that should never be uploaded
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+__MACOSX/
 .DS_Store
-
-*
-!.gitignore
-
-!Week 01 - Values, Types and Input-Output/
-!Week 01 - Values, Types and Input-Output/LAB/
-!Week 01 - Values, Types and Input-Output/LAB/**
-
-!Week 02 - Decisions and Loops/
-!Week 02 - Decisions and Loops/LAB/
-!Week 02 - Decisions and Loops/LAB/**
+.env
